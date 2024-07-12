@@ -13,6 +13,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    @helper MyData(String[] temp)
+    {
+        <ul>
+            @foreach (var item in temp)
+            {
+                 <li>@item</li>
+            }
+        </ul>
+    }
+
+    Country List
+    @MyData(new string[] {"India","Japan"})
+    Country List
+    @MyData(new string[] {"Argentina","Portugal"})
+
     <div> 
         <h2>Hello there!!! </h2>
         <h3>Welcome to my website</h3>
@@ -60,6 +76,10 @@
             </tr>
         }
     </table>
+
+
+
+
     </div>
 </body>
 </html>

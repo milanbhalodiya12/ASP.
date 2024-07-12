@@ -36,11 +36,34 @@
 
             </div>
         </nav>
+        <table class=" table table-info table-stripped">
+            <tr>
+                <td>Country Name</td>
+            </tr>
+            <tr>
+                <td>
+                    @foreach (var item in (List<String>)ViewData["Country"])
+                    {
+                        @item <br />
+                    }
+                </td>
+            </tr>
+        </table>
+        <table class="table table-success">
+            <tr>
+                <td>City Name</td>
+            </tr>
+            <tr>
+                <td>
+                    @foreach (var item in (List<String>)ViewBag.City)
+                    {
+                       @item <br />
+                    }
+                </td>
+            </tr>
+        </table>
+    
         
-        @foreach (var item in (List<String>) ViewData["Country"])
-        {
-           <h4>@item</h4>
-        }
     </div>
 </body>
 </html>

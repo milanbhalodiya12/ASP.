@@ -12,4 +12,5 @@ namespace WebApplication4.Models
         public String Name{ get; set; }
         public String City{ get; set; }
     }
+
 }
